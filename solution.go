@@ -13,10 +13,14 @@ import (
 // CalcSquare(10.0, SidesCircle)
 type side int
 
+const (
+	SidesTriangle side = 3
+	SidesSquare   side = 4
+	SidesCircle   side = 0
+)
+
 func CalcSquare(sideLen float64, sidesNum side) float64 {
-	const SidesTriangle side = 3
-	const SidesSquare side = 4
-	const SidesCircle side = 0
+
 	switch {
 	case sidesNum == SidesTriangle:
 		return math.Pow(sideLen, 2) * math.Sqrt(3) / 4
